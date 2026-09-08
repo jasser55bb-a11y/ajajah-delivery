@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajajah | Fast Delivery in Djerba Midoun</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff5722;
+            --primary-dark: #e64a19;
+            --secondary: #25d366;
+            --dark: #1e1e24;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px 80px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn-call {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-call:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Order Form Section */
+        .order-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #20ba5a;
+        }
+
+        /* Coverage Zones */
+        .coverage-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: #ffebe5;
+            color: var(--primary-dark);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            .order-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Header -->
+    <header>
+        <h1>AJAJAH DELIVERY</h1>
+        <p>Fast & Reliable Delivery Service in Djerba Midoun</p>
+        <div class="cta-buttons">
+            <a href="tel:+21600000000" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="#order" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Order Online</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Services Section -->
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Restaurant Orders</h3>
+                <p>Delivery from your favorite restaurants and cafes right to your doorstep.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shopping-basket"></i>
+                <h3>Grocery Shopping</h3>
+                <p>Fresh groceries, supermarket items, and daily essentials delivered fast.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-box"></i>
+                <h3>Package Express</h3>
+                <p>Pick up and drop off documents or personal packages across town.</p>
+            </div>
+        </div>
+
+        <!-- WhatsApp Order Form -->
+        <div class="order-section" id="order">
+            <h2 class="section-title">Place Your Order</h2>
+            <form id="deliveryForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="e.g., 20 000 000" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Type</label>
+                    <select id="service" required>
+                        <option value="Restaurant Delivery">Restaurant Delivery</option>
+                        <option value="Grocery Shopping">Grocery Shopping</option>
+                        <option value="Package Delivery">Package Pick-up / Drop-off</option>
+                        <option value="Other">Other Request</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Delivery Address / Zone</label>
+                    <input type="text" id="location" placeholder="e.g., Midoun Center, Zone Touristique" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Order Details</label>
+                    <textarea id="details" rows="4" placeholder="List items, preferred stores/restaurants, or instructions..." required></textarea>
+                </div>
+                <button type="button" class="submit-btn" onclick="sendWhatsAppOrder()">
+                    <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+                </button>
+            </form>
+        </div>
+
+        <!-- Coverage Area -->
+        <h2 class="section-title">Delivery Coverage</h2>
+        <div class="coverage-list">
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Midoun Center</span>
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Zone Touristique</span>
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Aghir</span>
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Mezraya</span>
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Tezdaine</span>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ajajah Delivery Service. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript logic for WhatsApp Integration -->
+    <script>
+        function sendWhatsAppOrder() {
+            // Replace with your actual phone number in international format without + or spaces (e.g., 216XXXXXXXX)
+            const phoneNumber = "21600000000";
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const location = document.getElementById('location').value;
+            const details = document.getElementById('details').value;
+
+            if (!name || !phone || !location || !details) {
+                alert('Please fill out all required fields before submitting.');
+                return;
+            }
+
+            // Constructing WhatsApp message string
+            const message = `*NEW ORDER - AJAJAH DELIVERY*%0A%0A` +
+                            `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                            `📞 *Phone:* ${encodeURIComponent(phone)}%0A` +
+                            `🛠️ *Service:* ${encodeURIComponent(service)}%0A` +
+                            `📍 *Address:* ${encodeURIComponent(location)}%0A%0A` +
+                            `📝 *Order Details:*%0A${encodeURIComponent(details)}`;
+
+            // Redirect to WhatsApp API
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
